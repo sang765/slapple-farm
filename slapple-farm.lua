@@ -524,7 +524,7 @@ local function ServerHop()
         -- Fallback: just teleport to same place (random server)
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(1) if readfile and loadstring then local s=readfile('Delta/Scripts/slapple-farm.lua') if s then loadstring(s)() end end")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
@@ -539,7 +539,7 @@ local function ServerHop()
         AddLog("Failed to parse server list, using simple hop...", "error")
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(1) if readfile and loadstring then local s=readfile('Delta/Scripts/slapple-farm.lua') if s then loadstring(s)() end end")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
@@ -560,7 +560,7 @@ local function ServerHop()
         AddLog("No available servers found, using simple hop...", "warning")
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(1) if readfile and loadstring then local s=readfile('Delta/Scripts/slapple-farm.lua') if s then loadstring(s)() end end")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
@@ -573,10 +573,10 @@ local function ServerHop()
     
     -- Queue script for auto-reexecute after hop
     pcall(function()
-        if queue_on_teleport then
-            queue_on_teleport("task.wait(1) if readfile and loadstring then local s=readfile('Delta/Scripts/slapple-farm.lua') if s then loadstring(s)() end end")
-            AddLog("Queued auto-execute for new server", "success")
-        end
+            if queue_on_teleport then
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
+                AddLog("Queued auto-execute for new server", "success")
+            end
     end)
     
     -- Teleport to new server
@@ -591,7 +591,7 @@ local function ServerHop()
         AddLog("Teleport failed: " .. tostring(teleportError) .. ", trying simple hop...", "error")
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(1) if readfile and loadstring then local s=readfile('Delta/Scripts/slapple-farm.lua') if s then loadstring(s)() end end")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
