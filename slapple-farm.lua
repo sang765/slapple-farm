@@ -524,7 +524,7 @@ local function ServerHop()
         -- Fallback: just teleport to same place (random server)
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://gist.githubusercontent.com/sang765/782a99f95f7adadf5dcb50f9a56e6a0f/raw'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
@@ -539,7 +539,7 @@ local function ServerHop()
         AddLog("Failed to parse server list, using simple hop...", "error")
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://gist.githubusercontent.com/sang765/782a99f95f7adadf5dcb50f9a56e6a0f/raw'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
@@ -560,7 +560,7 @@ local function ServerHop()
         AddLog("No available servers found, using simple hop...", "warning")
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://gist.githubusercontent.com/sang765/782a99f95f7adadf5dcb50f9a56e6a0f/raw'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
@@ -574,7 +574,7 @@ local function ServerHop()
     -- Queue script for auto-reexecute after hop
     pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://gist.githubusercontent.com/sang765/782a99f95f7adadf5dcb50f9a56e6a0f/raw'))()")
                 AddLog("Queued auto-execute for new server", "success")
             end
     end)
@@ -591,7 +591,7 @@ local function ServerHop()
         AddLog("Teleport failed: " .. tostring(teleportError) .. ", trying simple hop...", "error")
         pcall(function()
             if queue_on_teleport then
-                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://raw.githubusercontent.com/sang765/slapple-farm/main/slapple-farm.lua'))()")
+                queue_on_teleport("task.wait(2) loadstring(game:HttpGet('https://gist.githubusercontent.com/sang765/782a99f95f7adadf5dcb50f9a56e6a0f/raw'))()")
             end
             TeleportService:Teleport(PlaceId, LocalPlayer)
         end)
